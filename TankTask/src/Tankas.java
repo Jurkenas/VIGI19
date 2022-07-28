@@ -4,6 +4,15 @@ public class Tankas {
     private int y;
     private Kryptis kryptis;
 
+    // sunkiau suprasti, be papildomos informacijos nera aisku ka kuris skaicius reiskia
+    private int[] suviai = {0, 0, 0, 0}; // Š, R, P, V
+
+    // geresnis variantas, nekyla papildomu klausimu, aiskiai matosi ka kuriame kintamajame saugome
+    private int suviaiSiaure;
+    private int suviaiPietus;
+    private int suviaiVakarai;
+    private int suviaiRytai;
+
     public Tankas(int x, int y, Kryptis kryptis) {
         this.x = x;
         this.y = y;
@@ -64,7 +73,38 @@ public class Tankas {
         tankoJudejimoSpausdinimas();
     }
 
-    private void tankoJudejimoSpausdinimas(){
+    private void tankoJudejimoSpausdinimas() {
         System.out.printf("Tankas pajuda į %-10s (%2d;%2d) \n", getKryptis().getIKur(), getX(), getY());
+    }
+
+    private void suvisSpausdinimas(){
+        System.out.printf("Šūvis į %-10s\n", getKryptis().getIKur());
+    }
+
+    public void suvis() {
+        switch (kryptis) {
+            case SIAURE:
+                suviai[0]++;
+                suviaiSiaure++;
+                suvisSpausdinimas();
+                break;
+            case RYTAI:
+                suviai[1]++;
+                suviaiRytai++;
+                suvisSpausdinimas();
+                break;
+            case PIETUS:
+                suviai[2]++;
+                suviaiPietus++;
+                suvisSpausdinimas();
+                break;
+            case VAKARAI:
+                suviai[3]++;
+                suviaiVakarai++;
+                suvisSpausdinimas();
+                break;
+            default:
+                System.out.println("Suvis i sia krypti negalimas");
+        }
     }
 }

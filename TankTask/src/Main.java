@@ -3,13 +3,20 @@ public class Main {
         Tankas tankas1 = new Tankas(0, 0, Kryptis.RYTAI);
         tankas1.kairen();
         tankas1.kairen();
+        tankas1.suvis();
         tankas1.desinen();
         tankas1.atgal();
         tankas1.pirmyn();
+        tankas1.suvis();
         tankas1.kairen();
         tankas1.kairen();
+        tankas1.suvis();
         tankas1.kairen();
         tankas1.kairen();
+        tankas1.suvis();
+        tankas1.suvis();
         tankas1.atgal();
+        tankas1.suvis();
+        tankas1.suvis();
     }
 }
