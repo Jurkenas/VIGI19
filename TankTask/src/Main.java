@@ -2,12 +2,36 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Tankas tankas1 = new Tankas(0, 0, Kryptis.RYTAI);
+        Tankas tankas = new Tankas(0, 0, Kryptis.RYTAI);
         Scanner scanner = new Scanner(System.in);
         boolean runProgram = true;
         while(runProgram){
             showCommands();
-            runProgram = false;
+            String input = scanner.next();
+            switch (input){
+                case "s":
+                    tankas.pirmyn();
+                    break;
+                case "r":
+                    tankas.desinen();
+                    break;
+                case "p":
+                    tankas.atgal();
+                    break;
+                case "v":
+                    tankas.kairen();
+                    break;
+                case "*":
+                    tankas.suvis();
+                    break;
+                case "i":
+                    tankas.info();
+                    break;
+                case "x":
+                    runProgram = false;
+                default:
+                    System.out.println("komanda [" + input + "] nepalaikoma");
+            }
         }
         scanner.close();
     }
