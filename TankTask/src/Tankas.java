@@ -107,4 +107,20 @@ public class Tankas {
                 System.out.println("Suvis i sia krypti negalimas");
         }
     }
+
+    private int suviaiIsViso(){
+        return suviaiSiaure + suviaiRytai + suviaiPietus + suviaiVakarai;
+    }
+    public void info(){
+        System.out.print("\n ------------ INFO ------------\n");
+        System.out.printf("Tanko koordinatės: (%3d;%3d)\n", getX(), getY());
+        System.out.printf("Tanko kryptis: %10s\n", getKryptis());
+        System.out.println("Tanko šūviai:");
+        System.out.printf("  %-10s %2d\n","Į šiaurę:", this.suviaiSiaure);
+        System.out.printf("  %-10s %2d\n","Į rytus:", this.suviaiRytai);
+        System.out.printf("  %-10s %2d\n","Į pietus:", this.suviaiPietus);
+        System.out.printf("  %-10s %2d\n","Į vakarus:", this.suviaiVakarai);
+        System.out.printf("\n  %-10s %2d\n","Iš viso:", suviaiIsViso());
+        System.out.print(" ------------------------------\n\n");
+    }
 }

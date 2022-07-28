@@ -10,6 +10,7 @@ public class Main {
         tankas1.suvis();
         tankas1.kairen();
         tankas1.kairen();
+        tankas1.info();
         tankas1.suvis();
         tankas1.kairen();
         tankas1.kairen();
@@ -18,5 +19,6 @@ public class Main {
         tankas1.atgal();
         tankas1.suvis();
         tankas1.suvis();
+        tankas1.info();
     }
 }
