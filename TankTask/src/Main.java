@@ -29,6 +29,7 @@ public class Main {
                     break;
                 case "x":
                     runProgram = false;
+                    break;
                 default:
                     System.out.println("komanda [" + input + "] nepalaikoma");
             }
